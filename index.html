@@ -2,12 +2,447 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Wheelies Media</title>
+
+  <meta
+    name="description"
+    content="Join Scout, Asher, Ollie, and Bear for fun-filled truck adventures, friendship, teamwork, and imagination."
+  >
+
+  <title>Little Wheelies Media | Big Adventures. Little Heroes.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f9ff;
+      color: #17233b;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #075bb8;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #ffd426;
+    }
+
+    .hero {
+      width: 100%;
+      background: #1485de;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      padding: 55px 22px;
+      text-align: center;
+    }
+
+    .intro h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: #075bb8;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .intro p {
+      font-size: 1.15rem;
+      max-width: 750px;
+      margin: 0 auto 28px;
+    }
+
+    .youtube-button {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 999px;
+      background: #e62117;
+      color: white;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 900;
+      box-shadow: 0 6px 14px rgba(230, 33, 23, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .youtube-button:hover {
+      transform: translateY(-3px);
+    }
+
+    .crew-section {
+      background: white;
+      padding: 60px 22px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #075bb8;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 38px;
+      font-size: 1.1rem;
+    }
+
+    .crew-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .character {
+      border-radius: 22px;
+      padding: 28px 20px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
+      transition: transform 0.2s ease;
+    }
+
+    .character:hover {
+      transform: translateY(-6px);
+    }
+
+    .character h3 {
+      font-size: 1.65rem;
+      margin-bottom: 4px;
+    }
+
+    .character h4 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .character p {
+      font-size: 0.98rem;
+    }
+
+    .scout {
+      background: #f4af00;
+    }
+
+    .asher {
+      background: #df1f26;
+    }
+
+    .ollie {
+      background: #4e871c;
+    }
+
+    .bear {
+      background: #1974c9;
+    }
+
+    .values {
+      padding: 65px 22px;
+      background: linear-gradient(180deg, #eaf7ff, #ffffff);
+    }
+
+    .value-grid {
+      max-width: 950px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .value-card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .value-icon {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .value-card h3 {
+      color: #075bb8;
+      margin-bottom: 8px;
+    }
+
+    .about {
+      background: #075bb8;
+      color: white;
+      padding: 65px 22px;
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 18px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #10223d;
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+
+    @media (max-width: 850px) {
+      .crew-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 0.9rem;
+      }
+
+      .crew-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro {
+        padding: 42px 20px;
+      }
+
+      .crew-section,
+      .values,
+      .about {
+        padding: 48px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Little Wheelies Media</h1>
-  <p>Our new website is coming soon!</p>
+
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home">Little Wheelies</a>
+
+      <div class="nav-links">
+        <a href="#crew">Meet the Crew</a>
+        <a href="#values">Our Adventures</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <img
+        src="5EF2B019-69A1-470B-92D1-CFC54417A53C.png"
+        alt="Little Wheelies featuring Scout, Asher, Ollie and Bear"
+      >
+    </section>
+
+    <section class="intro">
+      <h1>Big Adventures. Little Heroes.</h1>
+
+      <p>
+        Join Scout, Asher, Ollie, and Bear as they explore new places,
+        help their friends, solve problems, and discover that every day
+        can become an exciting adventure.
+      </p>
+
+      <a
+        class="youtube-button"
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ▶ Watch on YouTube
+      </a>
+    </section>
+
+    <section class="crew-section" id="crew">
+      <h2 class="section-title">Meet the Little Wheelies</h2>
+
+      <p class="section-subtitle">
+        Four best friends with different jobs, big personalities, and
+        an even bigger love for adventure.
+      </p>
+
+      <div class="crew-grid">
+
+        <article class="character scout">
+          <h3>Scout</h3>
+          <h4>The School Bus</h4>
+          <p>
+            Scout is friendly, curious, positive, and always ready to
+            learn something new.
+          </p>
+        </article>
+
+        <article class="character asher">
+          <h3>Asher</h3>
+          <h4>The Fire Truck</h4>
+          <p>
+            Asher is brave, caring, dependable, and always ready to
+            help when someone needs him.
+          </p>
+        </article>
+
+        <article class="character ollie">
+          <h3>Ollie</h3>
+          <h4>The Garbage Truck</h4>
+          <p>
+            Ollie is smart, responsible, hardworking, and loves keeping
+            the community clean and green.
+          </p>
+        </article>
+
+        <article class="character bear">
+          <h3>Bear</h3>
+          <h4>The Dump Truck</h4>
+          <p>
+            Bear is strong, loyal, kind, and always ready to tackle a
+            big job with his friends.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="values" id="values">
+      <h2 class="section-title">Adventure With a Purpose</h2>
+
+      <p class="section-subtitle">
+        Little Wheelies combines colorful truck adventures with positive,
+        family-friendly messages for young viewers.
+      </p>
+
+      <div class="value-grid">
+
+        <article class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Teamwork</h3>
+          <p>
+            The crew learns that working together makes every challenge
+            easier and more fun.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon">❤️</div>
+          <h3>Kindness</h3>
+          <p>
+            Every adventure gives the Little Wheelies another opportunity
+            to help someone.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon">🌟</div>
+          <h3>Imagination</h3>
+          <p>
+            From neighborhood rescues to trips through space, there is no
+            limit to where the crew can go.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>About Little Wheelies</h2>
+
+        <p>
+          Little Wheelies is a family-friendly children's entertainment
+          brand following Scout the School Bus, Asher the Fire Truck,
+          Ollie the Garbage Truck, and Bear the Dump Truck. Together,
+          they experience exciting adventures built around friendship,
+          teamwork, kindness, and helping others.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Little Wheelies Media</strong></p>
+    <p>Big Adventures. Little Heroes.</p>
+    <p>© 2026 Little Wheelies Media LLC. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
